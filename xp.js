@@ -7,26 +7,28 @@ document.addEventListener("DOMContentLoaded", async function () {
   const xpLevel = document.getElementById("xpLevel");
 
   // Replace this with logic to identify the correct user if needed
-  const { data, error } = await supabase
-    .from('xp')
-    .select('*')
-    .limit(1);
+const { data, error } = await supabase
+  .from('xp')
+  .select('*')
+  .eq('name', 'Trent')   // Match the row with your name
+  .single();             // Expecting a single row only
 
-  if (error) {
-    console.error("Error fetching XP data:", error.message);
-    return;
-  }
+console.log("Supabase response:", data, error); // 🔍 Add it right here
 
-  if (data.length > 0) {
-    const userXP = data[0];
-    const percent = Math.min(userXP.xp || 0, 100);
+if (error) {
+  console.error("Error fetching XP data:", error.message);
+  return;
+}
 
-    if (xpFill) xpFill.style.width = percent + "%";
-    if (xpLabel) xpLabel.textContent = percent + "% XP";
-    if (xpLevel) xpLevel.textContent = "Level: " + (userXP.level || 'Unknown');
+if (data) {
+  const userXP = data;
+  const percent = Math.min(userXP.xp || 0, 100);
 
-    console.log("XP loaded:", userXP);
-  } else {
-    console.log("No XP data found.");
-  }
-});
+  if (xpFill) xpFill.style.width = percent + "%";
+  if (xpLabel) xpLabel.textContent = percent + "% XP";
+  if (xpLevel) xpLevel.textContent = "Level: " + (userXP.level || 'Unknown');
+
+  console.log("XP Loaded:", userXP);
+} else {
+  console.log("No XP data found.");
+}
