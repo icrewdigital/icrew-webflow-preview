@@ -41,3 +41,10 @@ Expanded README with full structure, features, setup instructions, and license f
 - Added XP bar animation
 - Enabled theme toggle and responsive layout
 - Integrated accessibility improvements
+# Changelog
+
+## [v1.0.0] — 2025-06-30
+- Initial Webflow-style badge UI
+- Added XP bar animation
+- Enabled theme toggle and responsive layout
+- Integrated accessibility improvements (alt text & tooltips)
