@@ -48,3 +48,11 @@ Expanded README with full structure, features, setup instructions, and license f
 - Added XP bar animation
 - Enabled theme toggle and responsive layout
 - Integrated accessibility improvements (alt text & tooltips)
+icrew-webflow-preview/
+├── index.html
+├── style.css
+├── manifest.json
+├── service-worker.js
+├── badge-beginner.png
+├── badge-intermediate.png
+├── ...
