@@ -1,0 +1,21 @@
+{
+  "name": "iCrew XP Dashboard",
+  "short_name": "iCrewXP",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "badge-beginner.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "badge-intermediate.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+Add PWA manifest.json with badge icons and app config
