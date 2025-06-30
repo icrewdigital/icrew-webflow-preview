@@ -5,12 +5,11 @@ document.addEventListener("DOMContentLoaded", async function () {
   const xpLabel = document.getElementById("xpLabel");
   const xpLevel = document.getElementById("xpLevel");
 
-  // Replace this with logic to identify the correct user if needed
   const { data, error } = await supabase
     .from('xp')
     .select('*')
-    .eq('name', 'Trent')  // Replace with dynamic name if needed
-    .single();            // Expecting one row only
+    .eq('name', 'Trent')
+    .maybeSingle(); // use maybeSingle to avoid fatal error
 
   console.log("Supabase response:", data, error);
 
