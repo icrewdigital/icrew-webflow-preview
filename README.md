@@ -35,3 +35,9 @@ MIT – free to use, remix, or build upon.
 
 Add full project README with features, structure, setup, license
 Expanded README with full structure, features, setup instructions, and license for the iCrew Webflow Preview project. Clarifies usage, deployment via GitHub Pages, and explains file layout.
+# Changelog
+## [v1.0.0] – 2025-06-30
+- Initial Webflow-style badge UI
+- Added XP bar animation
+- Enabled theme toggle and responsive layout
+- Integrated accessibility improvements
