@@ -1,70 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>iCrew Digital</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#007bff" />
-  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
-  <link rel="apple-touch-icon" href="icon-512.png" />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="badge-beginner.png" type="image/png">
+  <meta property="og:title" content="iCrew XP Dashboard" />
+  <meta property="og:image" content="og-preview.png" />
+  <meta property="og:description" content="Track your XP, earn badges, and go mobile with the iCrew App." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>iCrew XP Dashboard</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3MJ6F8FJE"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'G-XXXXXXX');
-
-    function trackXPGain(amount) {
-      gtag('event', 'xp_gain', {
-        'event_category': 'engagement',
-        'event_label': 'XP Earned',
-        'value': amount
-      });
-    }
-
-    function trackBadgeUnlocked(badgeName) {
-      gtag('event', 'badge_unlocked', {
-        'event_category': 'achievement',
-        'event_label': badgeName
-      });
-    }
-
-    function trackInstallPrompt() {
-      gtag('event', 'install_prompt_shown', {
-        'event_category': 'pwa',
-        'event_label': 'Install Prompt'
-      });
-    }
+    gtag('config', 'G-X3MJ6F8FJE');
   </script>
 </head>
 <body>
-  <header>
-    <h1>iCrew Dashboard</h1>
-    <button onclick="toggleDarkMode()">Toggle Theme</button>
-  </header>
-
-  <section class="xp-section">
-    <h2>Experience</h2>
-    <div class="xp-bar"><div class="fill" style="width: 40%;"></div></div>
-  </section>
-
-  <section class="badge-section">
-    <h2>Badges</h2>
-    <div class="badges">
-      <img src="badge1.png" alt="Starter Badge" />
-      <img src="badge2.png" alt="Level Up Badge" />
-    </div>
-  </section>
-
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-  </script>
+  <h1>iCrew XP Dashboard</h1>
 </body>
 </html>
